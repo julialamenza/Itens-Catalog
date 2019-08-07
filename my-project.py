@@ -184,7 +184,7 @@ def getUserID(email):
 
 # JSON APIs to view Bar Information
 @app.route('/bar/<int:bar_id>/menu/JSON')
-def barMenuJSON(bar_id):
+def barMenu(bar_id):
     bar = session.query(Bar).filter_by(id=bar_id).one()
     items = session.query(MenuItem).filter_by(
         bar_id=bar_id).all()
